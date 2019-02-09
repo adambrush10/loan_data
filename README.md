@@ -1,5 +1,6 @@
 # loan_data
-ETL project linking loan data and NFP data into a mySQL database
+
+ETL project linking loan data and NFP data in a mySQL database
 
 We used two sources of data, both being csv files. Source 1 was the nonfarm payroll data showing us the weekly and monthly average salary categorized by state. Source2 was a list of loan data from Q1 of 2016 on the website LendingClub. 
 
@@ -15,9 +16,14 @@ Tables created include the following:
 1.	loans
 2.	NonfarmPayroll
 
+
 A foreign key was created linking the following:
 1.	addr_state from the loans table and abbrev from the NonfarmPayroll table.
 
+
 Views we created include the following:
 1.	Total Loan amount by state (total_by_state)
-2.	Total delinquency rate and amount by state (delinquencies)
+2.	Total delinquency rate and amount by state along with the yearly average salary growth by state (delinquencies)
+3.  Total YoY growth rate by state (earnings_growth)
+
+* additional changes included removing spaces from all names, editing the state abbreviation for Connecticut 
